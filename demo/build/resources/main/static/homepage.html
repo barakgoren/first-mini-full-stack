@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2 id="greet"></h2>
+<div class="menu-container">
+  <button class="menu-button" onclick="showSearchContainer()">Search for a book</button>
+  <button class="menu-button" onclick="toggleUserDetails()">View user details</button>
+  <button class="menu-button" onclick="purchaseBook()">Purchase a book</button>
+  <button class="menu-button" id="logoutButton" onclick="logout()">Logout</button>
+</div>
+<div class="search-container" id="searchContainer" style="display: none;">
+  <input type="text" id="searchInput" placeholder="Search for a book">
+  <button class="search-button" onclick="searchBook()">Search</button>
+  <div>
+    <div id="searchResults"></div>
+  </div>
+
+</div>
+<!-- user display -->
+<div class="user-details">
+  <h2>User Details</h2>
+  <div class="user-info">
+    <div>
+      <label>Full Name:</label>
+      <span id="fullName"></span>
+    </div>
+    <div>
+      <label>Username:</label>
+      <span id="username"></span>
+    </div>
+    <div>
+      <label>Password:</label>
+      <span id="password"></span>
+    </div>
+  </div>
+  <h3>Books:</h3>
+  <ul id="userBookList"></ul>
+</div>
+
+
+<div id="bookList"></div>
+<div id="purchaseModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Book Details</h3>
+    <div id="purchaseBookDetails"></div>
+    <button id="purchaseButton">Purchase</button>
+  </div>
+</div>
+
+
+<script src="main.js"></script>
+</body>
+</html>
